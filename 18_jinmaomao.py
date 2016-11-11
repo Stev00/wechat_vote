@@ -74,6 +74,7 @@ while True:
         print(data)
 
     print(time.ctime())
-    print('\n\n\n等待', random_sleep_time(3), '秒再刷')
+    wait_time = random_sleep_time(3)
+    print('\n\n\n等待', wait_time, '秒再刷')
     
-    time.sleep(random_sleep_time(3))
+    time.sleep(wait_time)
