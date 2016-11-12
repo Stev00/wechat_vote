@@ -1,4 +1,4 @@
-#python3 win7
+﻿#python3 win7
 #utf-8
 
 'this is voting program for Jinmaomao'
@@ -72,9 +72,13 @@ while True:
         response = urllib.request.urlopen(request)
         data = response.read().decode('UTF-8')
         print(data)
+        print(time.ctime())
+        next_people_time = random_sleep_time(2)
+        print('等待', next_people_time, '秒刷下一人\n')
+        time.sleep(next_people_time)
 
     print(time.ctime())
-    wait_time = random_sleep_time(3)
-    print('\n\n\n等待', wait_time, '秒再刷')
+    next_turn_time = random_sleep_time(3)
+    print('\n\n\n此轮结束，等待', next_turn_time, '秒刷下一波')
     
-    time.sleep(wait_time)
+    time.sleep(next_turn_time)
